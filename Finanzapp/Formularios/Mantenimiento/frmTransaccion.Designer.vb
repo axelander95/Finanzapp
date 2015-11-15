@@ -22,19 +22,18 @@ Partial Class frmTransaccion
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblAño = New System.Windows.Forms.Label()
         Me.cmbAño = New System.Windows.Forms.ComboBox()
-        Me.btnSeleccionar = New System.Windows.Forms.Button()
         Me.grvTransacciones = New System.Windows.Forms.DataGridView()
-        Me.btnBuscarCuenta = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.btnSeleccionar = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.txtCodigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtCuenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnAgregarCuenta = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.txtValor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.btnAceptar = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
         CType(Me.grvTransacciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -57,17 +56,6 @@ Partial Class frmTransaccion
         Me.cmbAño.Size = New System.Drawing.Size(121, 25)
         Me.cmbAño.TabIndex = 1
         '
-        'btnSeleccionar
-        '
-        Me.btnSeleccionar.BackColor = System.Drawing.Color.Black
-        Me.btnSeleccionar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnSeleccionar.Location = New System.Drawing.Point(177, 8)
-        Me.btnSeleccionar.Name = "btnSeleccionar"
-        Me.btnSeleccionar.Size = New System.Drawing.Size(89, 33)
-        Me.btnSeleccionar.TabIndex = 2
-        Me.btnSeleccionar.Text = "Seleccionar"
-        Me.btnSeleccionar.UseVisualStyleBackColor = False
-        '
         'grvTransacciones
         '
         Me.grvTransacciones.AllowUserToResizeRows = False
@@ -76,7 +64,7 @@ Partial Class frmTransaccion
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grvTransacciones.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.grvTransacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grvTransacciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.btnBuscarCuenta, Me.txtCuenta, Me.btnAgregarCuenta, Me.txtValor})
+        Me.grvTransacciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.txtCodigo, Me.txtCuenta, Me.btnAgregarCuenta, Me.txtValor})
         Me.grvTransacciones.Cursor = System.Windows.Forms.Cursors.Hand
         Me.grvTransacciones.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.grvTransacciones.GridColor = System.Drawing.SystemColors.ControlDarkDark
@@ -88,31 +76,79 @@ Partial Class frmTransaccion
         Me.grvTransacciones.Size = New System.Drawing.Size(458, 240)
         Me.grvTransacciones.TabIndex = 3
         '
-        'btnBuscarCuenta
+        'btnSeleccionar
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.NullValue = "+"
-        Me.btnBuscarCuenta.DefaultCellStyle = DataGridViewCellStyle5
-        Me.btnBuscarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnBuscarCuenta.HeaderText = ""
-        Me.btnBuscarCuenta.Name = "btnBuscarCuenta"
-        Me.btnBuscarCuenta.Text = ""
-        Me.btnBuscarCuenta.ToolTipText = "Nueva cuenta"
-        Me.btnBuscarCuenta.Width = 25
+        Me.btnSeleccionar.Image = Global.FinanzApp.My.Resources.Resources._1439925608_006
+        Me.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSeleccionar.Location = New System.Drawing.Point(177, 12)
+        Me.btnSeleccionar.Name = "btnSeleccionar"
+        Me.btnSeleccionar.Size = New System.Drawing.Size(113, 25)
+        Me.btnSeleccionar.TabIndex = 2
+        Me.btnSeleccionar.Text = "Seleccionar"
+        Me.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSeleccionar.UseVisualStyleBackColor = True
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancelar.Image = Global.FinanzApp.My.Resources.Resources._1439925575_004
+        Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancelar.Location = New System.Drawing.Point(382, 293)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(87, 24)
+        Me.btnCancelar.TabIndex = 6
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCancelar.UseVisualStyleBackColor = True
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnGuardar.Image = Global.FinanzApp.My.Resources.Resources._1439925644_139
+        Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGuardar.Location = New System.Drawing.Point(289, 293)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(87, 24)
+        Me.btnGuardar.TabIndex = 5
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnGuardar.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEliminar.Image = Global.FinanzApp.My.Resources.Resources._1439925687_008
+        Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEliminar.Location = New System.Drawing.Point(196, 293)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(87, 24)
+        Me.btnEliminar.TabIndex = 4
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'txtCodigo
+        '
+        Me.txtCodigo.HeaderText = "CÓDIGO"
+        Me.txtCodigo.Name = "txtCodigo"
+        Me.txtCodigo.ReadOnly = True
+        Me.txtCodigo.Visible = False
         '
         'txtCuenta
         '
         Me.txtCuenta.HeaderText = "CUENTA"
+        Me.txtCuenta.MaxInputLength = 50
         Me.txtCuenta.Name = "txtCuenta"
         Me.txtCuenta.ReadOnly = True
         Me.txtCuenta.ToolTipText = "Nombre de cuenta"
-        Me.txtCuenta.Width = 280
+        Me.txtCuenta.Width = 285
         '
         'btnAgregarCuenta
         '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.NullValue = "..."
-        Me.btnAgregarCuenta.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.NullValue = "..."
+        Me.btnAgregarCuenta.DefaultCellStyle = DataGridViewCellStyle1
         Me.btnAgregarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnAgregarCuenta.HeaderText = ""
         Me.btnAgregarCuenta.Name = "btnAgregarCuenta"
@@ -123,59 +159,23 @@ Partial Class frmTransaccion
         'txtValor
         '
         Me.txtValor.HeaderText = "VALOR"
+        Me.txtValor.MaxInputLength = 18
         Me.txtValor.Name = "txtValor"
         Me.txtValor.ToolTipText = "Valor de la cuenta"
-        Me.txtValor.Width = 80
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCancelar.BackColor = System.Drawing.Color.Red
-        Me.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.btnCancelar.Location = New System.Drawing.Point(380, 293)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(90, 33)
-        Me.btnCancelar.TabIndex = 6
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = False
-        '
-        'btnAceptar
-        '
-        Me.btnAceptar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAceptar.BackColor = System.Drawing.Color.DarkGreen
-        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.btnAceptar.Location = New System.Drawing.Point(283, 293)
-        Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(91, 33)
-        Me.btnAceptar.TabIndex = 5
-        Me.btnAceptar.Text = "Aceptar"
-        Me.btnAceptar.UseVisualStyleBackColor = False
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnEliminar.BackColor = System.Drawing.Color.White
-        Me.btnEliminar.Location = New System.Drawing.Point(202, 293)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 33)
-        Me.btnEliminar.TabIndex = 4
-        Me.btnEliminar.Text = "Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = False
         '
         'frmTransaccion
         '
-        Me.AcceptButton = Me.btnAceptar
+        Me.AcceptButton = Me.btnGuardar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.CancelButton = Me.btnCancelar
-        Me.ClientSize = New System.Drawing.Size(482, 337)
+        Me.ClientSize = New System.Drawing.Size(482, 329)
         Me.Controls.Add(Me.btnEliminar)
-        Me.Controls.Add(Me.btnAceptar)
+        Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.grvTransacciones)
         Me.Controls.Add(Me.btnSeleccionar)
+        Me.Controls.Add(Me.grvTransacciones)
         Me.Controls.Add(Me.cmbAño)
         Me.Controls.Add(Me.lblAño)
         Me.Font = New System.Drawing.Font("Microsoft JhengHei UI Light", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -192,13 +192,13 @@ Partial Class frmTransaccion
 
     Friend WithEvents lblAño As Label
     Friend WithEvents cmbAño As ComboBox
-    Friend WithEvents btnSeleccionar As Button
     Friend WithEvents grvTransacciones As DataGridView
+    Friend WithEvents btnSeleccionar As Button
     Friend WithEvents btnCancelar As Button
-    Friend WithEvents btnAceptar As Button
-    Friend WithEvents btnBuscarCuenta As DataGridViewButtonColumn
+    Friend WithEvents btnGuardar As Button
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents txtCodigo As DataGridViewTextBoxColumn
     Friend WithEvents txtCuenta As DataGridViewTextBoxColumn
     Friend WithEvents btnAgregarCuenta As DataGridViewButtonColumn
     Friend WithEvents txtValor As DataGridViewTextBoxColumn
-    Friend WithEvents btnEliminar As Button
 End Class

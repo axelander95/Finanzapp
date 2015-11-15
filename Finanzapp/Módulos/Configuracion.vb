@@ -1,8 +1,11 @@
 ﻿Imports System.Configuration
+Imports System.IO
 Module Configuracion
     Public ArchivoUsuarioPath As String = Nothing
-    Public ArchivoClasificacionCuentasPath As String = Application.StartupPath & "/" & ConfigurationManager.AppSettings("ArchivoClasificacionCuentas")
-    Public ArchivoCuentasPath As String = Application.StartupPath & "/" & ConfigurationManager.AppSettings("ArchivoCuentas")
+    Public DirectorioCuentas As String = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) & "/" & ConfigurationManager.AppSettings("DirectorioCuentas")
+    Public ArchivoClasificacionCuentasPath As String = DirectorioCuentas & "/" & ConfigurationManager.AppSettings("ArchivoClasificacionCuentas")
+    Public ArchivoCuentasPath As String = DirectorioCuentas & "/" & ConfigurationManager.AppSettings("ArchivoCuentas")
+    Public ArchivoPrincipal As List(Of EstadoFinanciero) = Nothing
     Public Sub InicializarClasificacionCuentas()
         Dim ObjetoArchivo As List(Of ClasificacionCuenta) = CargarArchivo(ArchivoClasificacionCuentasPath)
         If ObjetoArchivo Is Nothing Then
@@ -40,6 +43,11 @@ Module Configuracion
             ObjetoArchivo.Add(New Cuenta("IXP", "PC", "IMPUESTOS POR PAGAR", False))
             ObjetoArchivo.Add(New Cuenta("CXP", "PC", "CUENTAS POR PAGAR", False))
             GuardarArchivo(ArchivoCuentasPath, ObjetoArchivo)
+        End If
+    End Sub
+    Public Sub InicializarDirectorioCuentas()
+        If Not Directory.Exists(DirectorioCuentas) Then
+            Directory.CreateDirectory(DirectorioCuentas)
         End If
     End Sub
 End Module

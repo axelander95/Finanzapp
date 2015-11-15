@@ -1,4 +1,5 @@
-﻿Public Class EstadoFinanciero
+﻿<Serializable()>
+Public Class EstadoFinanciero
     Public Property ListaTransaccion As List(Of Transaccion)
     Public Property Año As Integer
     Public Sub New(ByVal Año As Integer)

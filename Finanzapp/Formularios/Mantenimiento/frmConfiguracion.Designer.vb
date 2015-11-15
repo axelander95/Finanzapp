@@ -36,8 +36,8 @@ Partial Class frmConfiguracion
         Me.txtCorreoElectronico = New System.Windows.Forms.TextBox()
         Me.lblPaginaWeb = New System.Windows.Forms.Label()
         Me.txtPaginaWeb = New System.Windows.Forms.TextBox()
-        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblNombreEmpresa
@@ -163,40 +163,38 @@ Partial Class frmConfiguracion
         Me.txtPaginaWeb.Size = New System.Drawing.Size(391, 24)
         Me.txtPaginaWeb.TabIndex = 13
         '
-        'btnCancelar
-        '
-        Me.btnCancelar.BackColor = System.Drawing.Color.Red
-        Me.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.btnCancelar.Location = New System.Drawing.Point(477, 196)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(90, 33)
-        Me.btnCancelar.TabIndex = 14
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = False
-        '
         'btnAceptar
         '
-        Me.btnAceptar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAceptar.BackColor = System.Drawing.Color.DarkGreen
-        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.btnAceptar.Location = New System.Drawing.Point(380, 196)
+        Me.btnAceptar.Image = Global.FinanzApp.My.Resources.Resources._1439925608_006
+        Me.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAceptar.Location = New System.Drawing.Point(385, 196)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(91, 33)
-        Me.btnAceptar.TabIndex = 15
+        Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAceptar.TabIndex = 14
         Me.btnAceptar.Text = "Aceptar"
-        Me.btnAceptar.UseVisualStyleBackColor = False
+        Me.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAceptar.UseVisualStyleBackColor = True
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.Image = Global.FinanzApp.My.Resources.Resources._1439925575_004
+        Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancelar.Location = New System.Drawing.Point(489, 196)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelar.TabIndex = 15
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'frmConfiguracion
         '
-        Me.AcceptButton = Me.btnAceptar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.CancelButton = Me.btnCancelar
         Me.ClientSize = New System.Drawing.Size(579, 234)
-        Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.btnCancelar)
+        Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.txtPaginaWeb)
         Me.Controls.Add(Me.lblPaginaWeb)
         Me.Controls.Add(Me.txtCorreoElectronico)
@@ -235,6 +233,6 @@ Partial Class frmConfiguracion
     Friend WithEvents txtCorreoElectronico As TextBox
     Friend WithEvents lblPaginaWeb As Label
     Friend WithEvents txtPaginaWeb As TextBox
-    Friend WithEvents btnCancelar As Button
     Friend WithEvents btnAceptar As Button
+    Friend WithEvents btnCancelar As Button
 End Class

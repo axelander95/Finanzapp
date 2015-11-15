@@ -140,6 +140,7 @@
     </Compile>
     <Compile Include="Módulos\Archivo.vb" />
     <Compile Include="Módulos\Configuracion.vb" />
+    <Compile Include="Módulos\General.vb" />
     <Compile Include="Orígenes de datos\dstEstadoFinanciero.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -227,6 +228,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1439925608_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1439926311_090.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1439927080_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1439925644_1391.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1439925619_120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form_input_checkbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1439925611_018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

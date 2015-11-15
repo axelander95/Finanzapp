@@ -41,7 +41,7 @@ Partial Class frmBusqueda
         Me.lbxLista.Location = New System.Drawing.Point(16, 49)
         Me.lbxLista.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.lbxLista.Name = "lbxLista"
-        Me.lbxLista.Size = New System.Drawing.Size(499, 242)
+        Me.lbxLista.Size = New System.Drawing.Size(504, 242)
         Me.lbxLista.TabIndex = 2
         '
         'txtBusqueda
@@ -54,14 +54,14 @@ Partial Class frmBusqueda
         Me.txtBusqueda.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtBusqueda.MaxLength = 50
         Me.txtBusqueda.Name = "txtBusqueda"
-        Me.txtBusqueda.Size = New System.Drawing.Size(447, 24)
+        Me.txtBusqueda.Size = New System.Drawing.Size(452, 24)
         Me.txtBusqueda.TabIndex = 0
         '
         'btnBusqueda
         '
         Me.btnBusqueda.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnBusqueda.Image = Global.FinanzApp.My.Resources.Resources._1439925626_140
-        Me.btnBusqueda.Location = New System.Drawing.Point(472, 15)
+        Me.btnBusqueda.Location = New System.Drawing.Point(477, 15)
         Me.btnBusqueda.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnBusqueda.Name = "btnBusqueda"
         Me.btnBusqueda.Size = New System.Drawing.Size(43, 24)
@@ -71,27 +71,29 @@ Partial Class frmBusqueda
         'btnCancelar
         '
         Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCancelar.BackColor = System.Drawing.Color.Red
         Me.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.btnCancelar.Location = New System.Drawing.Point(424, 300)
+        Me.btnCancelar.Image = Global.FinanzApp.My.Resources.Resources._1439925575_004
+        Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancelar.Location = New System.Drawing.Point(435, 300)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(90, 33)
+        Me.btnCancelar.Size = New System.Drawing.Size(85, 33)
         Me.btnCancelar.TabIndex = 4
         Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = False
+        Me.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'btnSeleccionar
         '
         Me.btnSeleccionar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSeleccionar.BackColor = System.Drawing.Color.DarkGreen
-        Me.btnSeleccionar.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.btnSeleccionar.Location = New System.Drawing.Point(327, 300)
+        Me.btnSeleccionar.Image = Global.FinanzApp.My.Resources.Resources._1439925608_006
+        Me.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSeleccionar.Location = New System.Drawing.Point(321, 300)
         Me.btnSeleccionar.Name = "btnSeleccionar"
-        Me.btnSeleccionar.Size = New System.Drawing.Size(91, 33)
-        Me.btnSeleccionar.TabIndex = 3
+        Me.btnSeleccionar.Size = New System.Drawing.Size(108, 33)
+        Me.btnSeleccionar.TabIndex = 5
         Me.btnSeleccionar.Text = "Seleccionar"
-        Me.btnSeleccionar.UseVisualStyleBackColor = False
+        Me.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSeleccionar.UseVisualStyleBackColor = True
         '
         'frmBusqueda
         '
@@ -100,7 +102,7 @@ Partial Class frmBusqueda
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.CancelButton = Me.btnCancelar
-        Me.ClientSize = New System.Drawing.Size(532, 345)
+        Me.ClientSize = New System.Drawing.Size(532, 340)
         Me.Controls.Add(Me.btnSeleccionar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnBusqueda)
