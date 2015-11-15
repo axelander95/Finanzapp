@@ -30,6 +30,7 @@ Partial Class frmMDI
         Me.itmAbrir = New System.Windows.Forms.ToolStripMenuItem()
         Me.itmSeparador1 = New System.Windows.Forms.ToolStripSeparator()
         Me.itmGuardar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.itmGuardarComo = New System.Windows.Forms.ToolStripMenuItem()
         Me.itmSeparador2 = New System.Windows.Forms.ToolStripSeparator()
         Me.itmSalir = New System.Windows.Forms.ToolStripMenuItem()
         Me.itmMantenimiento = New System.Windows.Forms.ToolStripMenuItem()
@@ -73,7 +74,7 @@ Partial Class frmMDI
         '
         'itmArchivo
         '
-        Me.itmArchivo.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.itmNuevo, Me.itmAbrir, Me.itmSeparador1, Me.itmGuardar, Me.itmSeparador2, Me.itmSalir})
+        Me.itmArchivo.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.itmNuevo, Me.itmAbrir, Me.itmSeparador1, Me.itmGuardar, Me.itmGuardarComo, Me.itmSeparador2, Me.itmSalir})
         Me.itmArchivo.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.0!)
         Me.itmArchivo.Name = "itmArchivo"
         Me.itmArchivo.Size = New System.Drawing.Size(62, 21)
@@ -82,35 +83,41 @@ Partial Class frmMDI
         'itmNuevo
         '
         Me.itmNuevo.Name = "itmNuevo"
-        Me.itmNuevo.Size = New System.Drawing.Size(119, 22)
+        Me.itmNuevo.Size = New System.Drawing.Size(165, 22)
         Me.itmNuevo.Text = "Nuevo"
         '
         'itmAbrir
         '
         Me.itmAbrir.Name = "itmAbrir"
-        Me.itmAbrir.Size = New System.Drawing.Size(119, 22)
+        Me.itmAbrir.Size = New System.Drawing.Size(165, 22)
         Me.itmAbrir.Text = "Abrir"
         '
         'itmSeparador1
         '
         Me.itmSeparador1.Name = "itmSeparador1"
-        Me.itmSeparador1.Size = New System.Drawing.Size(116, 6)
+        Me.itmSeparador1.Size = New System.Drawing.Size(162, 6)
         '
         'itmGuardar
         '
         Me.itmGuardar.Name = "itmGuardar"
-        Me.itmGuardar.Size = New System.Drawing.Size(119, 22)
+        Me.itmGuardar.Size = New System.Drawing.Size(165, 22)
         Me.itmGuardar.Text = "Guardar"
+        '
+        'itmGuardarComo
+        '
+        Me.itmGuardarComo.Name = "itmGuardarComo"
+        Me.itmGuardarComo.Size = New System.Drawing.Size(165, 22)
+        Me.itmGuardarComo.Text = "Guardar como..."
         '
         'itmSeparador2
         '
         Me.itmSeparador2.Name = "itmSeparador2"
-        Me.itmSeparador2.Size = New System.Drawing.Size(116, 6)
+        Me.itmSeparador2.Size = New System.Drawing.Size(162, 6)
         '
         'itmSalir
         '
         Me.itmSalir.Name = "itmSalir"
-        Me.itmSalir.Size = New System.Drawing.Size(119, 22)
+        Me.itmSalir.Size = New System.Drawing.Size(165, 22)
         Me.itmSalir.Text = "Salir"
         '
         'itmMantenimiento
@@ -222,4 +229,5 @@ Partial Class frmMDI
     Friend WithEvents itmDocumentacion As ToolStripMenuItem
     Friend WithEvents itmAcercaDe As ToolStripMenuItem
     Friend WithEvents itmTransacciones As ToolStripMenuItem
+    Friend WithEvents itmGuardarComo As ToolStripMenuItem
 End Class

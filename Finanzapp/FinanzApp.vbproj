@@ -47,10 +47,14 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -88,10 +92,28 @@
     <Compile Include="Formularios\Controles\frmBusqueda.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\Controles\frmReporte.Designer.vb">
+      <DependentUpon>frmReporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Controles\frmReporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\frmConfiguracion.Designer.vb">
+      <DependentUpon>frmConfiguracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\frmConfiguracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Mantenimiento\frmCuenta.Designer.vb">
       <DependentUpon>frmCuenta.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Mantenimiento\frmCuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\frmTransaccion.Designer.vb">
+      <DependentUpon>frmTransaccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\frmTransaccion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMDI.vb">
@@ -117,6 +139,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Módulos\Archivo.vb" />
+    <Compile Include="Módulos\Configuracion.vb" />
+    <Compile Include="Orígenes de datos\dstEstadoFinanciero.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstEstadoFinanciero.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Formularios\Controles\ctlToolBar.resx">
@@ -125,8 +153,17 @@
     <EmbeddedResource Include="Formularios\Controles\frmBusqueda.resx">
       <DependentUpon>frmBusqueda.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Controles\frmReporte.resx">
+      <DependentUpon>frmReporte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\frmConfiguracion.resx">
+      <DependentUpon>frmConfiguracion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimiento\frmCuenta.resx">
       <DependentUpon>frmCuenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\frmTransaccion.resx">
+      <DependentUpon>frmTransaccion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMDI.es.resx">
       <DependentUpon>frmMDI.vb</DependentUpon>
@@ -140,6 +177,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptBalanceGeneral.rdlc" />
+    <EmbeddedResource Include="Reportes\rptEstadoResultados.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -158,6 +197,17 @@
     <Folder Include="Formularios\Ver\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Orígenes de datos\dstEstadoFinanciero.xsc">
+      <DependentUpon>dstEstadoFinanciero.xsd</DependentUpon>
+    </None>
+    <None Include="Orígenes de datos\dstEstadoFinanciero.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstEstadoFinanciero.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Orígenes de datos\dstEstadoFinanciero.xss">
+      <DependentUpon>dstEstadoFinanciero.xsd</DependentUpon>
+    </None>
     <None Include="Resources\1439925626_140.png" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +224,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1439925575_004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

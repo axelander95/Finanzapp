@@ -42,29 +42,30 @@ Partial Class frmBusqueda
         Me.lbxLista.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.lbxLista.Name = "lbxLista"
         Me.lbxLista.Size = New System.Drawing.Size(499, 242)
-        Me.lbxLista.TabIndex = 0
+        Me.lbxLista.TabIndex = 2
         '
         'txtBusqueda
         '
         Me.txtBusqueda.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtBusqueda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtBusqueda.Font = New System.Drawing.Font("Microsoft JhengHei UI Light", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBusqueda.Location = New System.Drawing.Point(17, 15)
         Me.txtBusqueda.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtBusqueda.MaxLength = 50
         Me.txtBusqueda.Name = "txtBusqueda"
         Me.txtBusqueda.Size = New System.Drawing.Size(447, 24)
-        Me.txtBusqueda.TabIndex = 1
+        Me.txtBusqueda.TabIndex = 0
         '
         'btnBusqueda
         '
         Me.btnBusqueda.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnBusqueda.Image = Global.Finanzapp.My.Resources.Resources._1439925626_140
+        Me.btnBusqueda.Image = Global.FinanzApp.My.Resources.Resources._1439925626_140
         Me.btnBusqueda.Location = New System.Drawing.Point(472, 15)
         Me.btnBusqueda.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnBusqueda.Name = "btnBusqueda"
         Me.btnBusqueda.Size = New System.Drawing.Size(43, 24)
-        Me.btnBusqueda.TabIndex = 2
+        Me.btnBusqueda.TabIndex = 1
         Me.btnBusqueda.UseVisualStyleBackColor = True
         '
         'btnCancelar
@@ -76,7 +77,7 @@ Partial Class frmBusqueda
         Me.btnCancelar.Location = New System.Drawing.Point(424, 300)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(90, 33)
-        Me.btnCancelar.TabIndex = 3
+        Me.btnCancelar.TabIndex = 4
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
@@ -88,7 +89,7 @@ Partial Class frmBusqueda
         Me.btnSeleccionar.Location = New System.Drawing.Point(327, 300)
         Me.btnSeleccionar.Name = "btnSeleccionar"
         Me.btnSeleccionar.Size = New System.Drawing.Size(91, 33)
-        Me.btnSeleccionar.TabIndex = 4
+        Me.btnSeleccionar.TabIndex = 3
         Me.btnSeleccionar.Text = "Seleccionar"
         Me.btnSeleccionar.UseVisualStyleBackColor = False
         '
