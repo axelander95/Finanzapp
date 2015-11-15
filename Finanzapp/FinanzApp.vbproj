@@ -76,10 +76,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Empresa.vb" />
     <Compile Include="Clases\EstadoFinanciero.vb" />
     <Compile Include="Clases\ClasificacionCuenta.vb" />
     <Compile Include="Clases\Cuenta.vb" />
+    <Compile Include="Clases\Proyecto.vb" />
     <Compile Include="Clases\Transaccion.vb" />
+    <Compile Include="Formularios\Ayuda\frmAcercaDe.Designer.vb">
+      <DependentUpon>frmAcercaDe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ayuda\frmAcercaDe.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Controles\ctlToolBar.Designer.vb">
       <DependentUpon>ctlToolBar.vb</DependentUpon>
     </Compile>
@@ -141,6 +149,7 @@
     <Compile Include="Módulos\Archivo.vb" />
     <Compile Include="Módulos\Configuracion.vb" />
     <Compile Include="Módulos\General.vb" />
+    <Compile Include="Módulos\Validacion.vb" />
     <Compile Include="Orígenes de datos\dstEstadoFinanciero.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -148,6 +157,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\Ayuda\frmAcercaDe.resx">
+      <DependentUpon>frmAcercaDe.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Controles\ctlToolBar.resx">
       <DependentUpon>ctlToolBar.vb</DependentUpon>
     </EmbeddedResource>
@@ -194,7 +206,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Formularios\Ayuda\" />
     <Folder Include="Formularios\Ver\" />
   </ItemGroup>
   <ItemGroup>
@@ -252,6 +263,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1439927066_question_blue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

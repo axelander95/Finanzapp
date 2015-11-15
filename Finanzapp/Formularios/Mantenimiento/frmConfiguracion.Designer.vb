@@ -22,6 +22,7 @@ Partial Class frmConfiguracion
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConfiguracion))
         Me.lblNombreEmpresa = New System.Windows.Forms.Label()
         Me.txtNombreEmpresa = New System.Windows.Forms.TextBox()
         Me.lblRuc = New System.Windows.Forms.Label()
@@ -38,16 +39,17 @@ Partial Class frmConfiguracion
         Me.txtPaginaWeb = New System.Windows.Forms.TextBox()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.lblAdevertencia = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lblNombreEmpresa
         '
         Me.lblNombreEmpresa.AutoSize = True
-        Me.lblNombreEmpresa.Location = New System.Drawing.Point(14, 16)
+        Me.lblNombreEmpresa.Location = New System.Drawing.Point(4, 16)
         Me.lblNombreEmpresa.Name = "lblNombreEmpresa"
-        Me.lblNombreEmpresa.Size = New System.Drawing.Size(153, 18)
+        Me.lblNombreEmpresa.Size = New System.Drawing.Size(163, 18)
         Me.lblNombreEmpresa.TabIndex = 0
-        Me.lblNombreEmpresa.Text = "Nombre de la empresa"
+        Me.lblNombreEmpresa.Text = "* Nombre de la empresa"
         '
         'txtNombreEmpresa
         '
@@ -61,11 +63,11 @@ Partial Class frmConfiguracion
         'lblRuc
         '
         Me.lblRuc.AutoSize = True
-        Me.lblRuc.Location = New System.Drawing.Point(126, 45)
+        Me.lblRuc.Location = New System.Drawing.Point(116, 46)
         Me.lblRuc.Name = "lblRuc"
-        Me.lblRuc.Size = New System.Drawing.Size(41, 18)
+        Me.lblRuc.Size = New System.Drawing.Size(51, 18)
         Me.lblRuc.TabIndex = 2
-        Me.lblRuc.Text = "R.U.C"
+        Me.lblRuc.Text = "* R.U.C"
         '
         'txtRuc
         '
@@ -78,11 +80,11 @@ Partial Class frmConfiguracion
         'lblDireccion
         '
         Me.lblDireccion.AutoSize = True
-        Me.lblDireccion.Location = New System.Drawing.Point(99, 77)
+        Me.lblDireccion.Location = New System.Drawing.Point(89, 77)
         Me.lblDireccion.Name = "lblDireccion"
-        Me.lblDireccion.Size = New System.Drawing.Size(68, 18)
+        Me.lblDireccion.Size = New System.Drawing.Size(78, 18)
         Me.lblDireccion.TabIndex = 4
-        Me.lblDireccion.Text = "Dirección"
+        Me.lblDireccion.Text = "* Dirección"
         '
         'txtDireccion
         '
@@ -167,9 +169,9 @@ Partial Class frmConfiguracion
         '
         Me.btnAceptar.Image = Global.FinanzApp.My.Resources.Resources._1439925608_006
         Me.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAceptar.Location = New System.Drawing.Point(385, 196)
+        Me.btnAceptar.Location = New System.Drawing.Point(390, 196)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAceptar.Size = New System.Drawing.Size(85, 23)
         Me.btnAceptar.TabIndex = 14
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -179,20 +181,31 @@ Partial Class frmConfiguracion
         '
         Me.btnCancelar.Image = Global.FinanzApp.My.Resources.Resources._1439925575_004
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(489, 196)
+        Me.btnCancelar.Location = New System.Drawing.Point(481, 196)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelar.Size = New System.Drawing.Size(83, 23)
         Me.btnCancelar.TabIndex = 15
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
+        'lblAdevertencia
+        '
+        Me.lblAdevertencia.AutoSize = True
+        Me.lblAdevertencia.Font = New System.Drawing.Font("Microsoft JhengHei UI Light", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAdevertencia.Location = New System.Drawing.Point(12, 202)
+        Me.lblAdevertencia.Name = "lblAdevertencia"
+        Me.lblAdevertencia.Size = New System.Drawing.Size(102, 15)
+        Me.lblAdevertencia.TabIndex = 16
+        Me.lblAdevertencia.Text = "* Campos requeridos"
+        '
         'frmConfiguracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ClientSize = New System.Drawing.Size(579, 234)
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.ClientSize = New System.Drawing.Size(579, 226)
+        Me.Controls.Add(Me.lblAdevertencia)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.txtPaginaWeb)
@@ -210,7 +223,10 @@ Partial Class frmConfiguracion
         Me.Controls.Add(Me.txtNombreEmpresa)
         Me.Controls.Add(Me.lblNombreEmpresa)
         Me.Font = New System.Drawing.Font("Microsoft JhengHei UI Light", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.MaximizeBox = False
         Me.Name = "frmConfiguracion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Configuración"
@@ -235,4 +251,5 @@ Partial Class frmConfiguracion
     Friend WithEvents txtPaginaWeb As TextBox
     Friend WithEvents btnAceptar As Button
     Friend WithEvents btnCancelar As Button
+    Friend WithEvents lblAdevertencia As Label
 End Class

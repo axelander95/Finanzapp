@@ -5,7 +5,7 @@ Module Configuracion
     Public DirectorioCuentas As String = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) & "/" & ConfigurationManager.AppSettings("DirectorioCuentas")
     Public ArchivoClasificacionCuentasPath As String = DirectorioCuentas & "/" & ConfigurationManager.AppSettings("ArchivoClasificacionCuentas")
     Public ArchivoCuentasPath As String = DirectorioCuentas & "/" & ConfigurationManager.AppSettings("ArchivoCuentas")
-    Public ArchivoPrincipal As List(Of EstadoFinanciero) = Nothing
+    Public ArchivoPrincipal As Proyecto = Nothing
     Public Sub InicializarClasificacionCuentas()
         Dim ObjetoArchivo As List(Of ClasificacionCuenta) = CargarArchivo(ArchivoClasificacionCuentasPath)
         If ObjetoArchivo Is Nothing Then
@@ -15,8 +15,11 @@ Module Configuracion
             ObjetoArchivo.Add(New ClasificacionCuenta("PC", "PASIVO CORRIENTE"))
             ObjetoArchivo.Add(New ClasificacionCuenta("PD", "PASIVO DIFERIDO"))
             ObjetoArchivo.Add(New ClasificacionCuenta("PAT", "PATRIMONIO"))
-            ObjetoArchivo.Add(New ClasificacionCuenta("IN", "INGRESO"))
-            ObjetoArchivo.Add(New ClasificacionCuenta("EG", "EGRESO"))
+            ObjetoArchivo.Add(New ClasificacionCuenta("INB", "INGRESO BRUTO"))
+            ObjetoArchivo.Add(New ClasificacionCuenta("COS", "COSTO"))
+            ObjetoArchivo.Add(New ClasificacionCuenta("GAO", "GASTO DE OPERACIÓN"))
+            ObjetoArchivo.Add(New ClasificacionCuenta("OIN", "OTRO INGRESO NO OPERATIVO"))
+            ObjetoArchivo.Add(New ClasificacionCuenta("OGA", "OTRO GASTO NO OPERATIVO"))
             GuardarArchivo(ArchivoClasificacionCuentasPath, ObjetoArchivo)
         End If
     End Sub

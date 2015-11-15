@@ -26,17 +26,12 @@ Partial Class frmMDI
         Me.pgbMDI = New System.Windows.Forms.ToolStripProgressBar()
         Me.mstMDI = New System.Windows.Forms.MenuStrip()
         Me.itmArchivo = New System.Windows.Forms.ToolStripMenuItem()
-        Me.itmSeparador1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.itmGuardarComo = New System.Windows.Forms.ToolStripMenuItem()
-        Me.itmSeparador2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.itmAyuda = New System.Windows.Forms.ToolStripMenuItem()
-        Me.itmDocumentacion = New System.Windows.Forms.ToolStripMenuItem()
-        Me.itmAcercaDe = New System.Windows.Forms.ToolStripMenuItem()
-        Me.sfdArchivo = New System.Windows.Forms.SaveFileDialog()
-        Me.ofdArchivo = New System.Windows.Forms.OpenFileDialog()
         Me.itmNuevo = New System.Windows.Forms.ToolStripMenuItem()
         Me.itmAbrir = New System.Windows.Forms.ToolStripMenuItem()
+        Me.itmSeparador1 = New System.Windows.Forms.ToolStripSeparator()
         Me.itmGuardar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.itmGuardarComo = New System.Windows.Forms.ToolStripMenuItem()
+        Me.itmSeparador2 = New System.Windows.Forms.ToolStripSeparator()
         Me.itmSalir = New System.Windows.Forms.ToolStripMenuItem()
         Me.itmMantenimiento = New System.Windows.Forms.ToolStripMenuItem()
         Me.itmCuentas = New System.Windows.Forms.ToolStripMenuItem()
@@ -45,6 +40,11 @@ Partial Class frmMDI
         Me.itmConfiguracion = New System.Windows.Forms.ToolStripMenuItem()
         Me.itmVer = New System.Windows.Forms.ToolStripMenuItem()
         Me.itmReportes = New System.Windows.Forms.ToolStripMenuItem()
+        Me.itmAyuda = New System.Windows.Forms.ToolStripMenuItem()
+        Me.itmDocumentacion = New System.Windows.Forms.ToolStripMenuItem()
+        Me.itmAcercaDe = New System.Windows.Forms.ToolStripMenuItem()
+        Me.sfdArchivo = New System.Windows.Forms.SaveFileDialog()
+        Me.ofdArchivo = New System.Windows.Forms.OpenFileDialog()
         Me.sstBarraEstado.SuspendLayout()
         Me.mstMDI.SuspendLayout()
         Me.SuspendLayout()
@@ -82,51 +82,6 @@ Partial Class frmMDI
         Me.itmArchivo.Size = New System.Drawing.Size(62, 21)
         Me.itmArchivo.Text = "Archivo"
         '
-        'itmSeparador1
-        '
-        Me.itmSeparador1.Name = "itmSeparador1"
-        Me.itmSeparador1.Size = New System.Drawing.Size(162, 6)
-        '
-        'itmGuardarComo
-        '
-        Me.itmGuardarComo.Name = "itmGuardarComo"
-        Me.itmGuardarComo.Size = New System.Drawing.Size(165, 22)
-        Me.itmGuardarComo.Text = "Guardar como..."
-        '
-        'itmSeparador2
-        '
-        Me.itmSeparador2.Name = "itmSeparador2"
-        Me.itmSeparador2.Size = New System.Drawing.Size(162, 6)
-        '
-        'itmAyuda
-        '
-        Me.itmAyuda.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.itmDocumentacion, Me.itmAcercaDe})
-        Me.itmAyuda.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.0!)
-        Me.itmAyuda.Name = "itmAyuda"
-        Me.itmAyuda.Size = New System.Drawing.Size(54, 21)
-        Me.itmAyuda.Text = "Ayuda"
-        '
-        'itmDocumentacion
-        '
-        Me.itmDocumentacion.Name = "itmDocumentacion"
-        Me.itmDocumentacion.Size = New System.Drawing.Size(165, 22)
-        Me.itmDocumentacion.Text = "Documentación"
-        '
-        'itmAcercaDe
-        '
-        Me.itmAcercaDe.Name = "itmAcercaDe"
-        Me.itmAcercaDe.Size = New System.Drawing.Size(165, 22)
-        Me.itmAcercaDe.Text = "Acerca de"
-        '
-        'sfdArchivo
-        '
-        Me.sfdArchivo.Filter = "Archivos FinanzApp|*.fnz"
-        Me.sfdArchivo.Title = "Guardar"
-        '
-        'ofdArchivo
-        '
-        Me.ofdArchivo.Filter = "Archivos FinanzApp|*.fnz"
-        '
         'itmNuevo
         '
         Me.itmNuevo.Image = Global.FinanzApp.My.Resources.Resources._1439926311_090
@@ -141,12 +96,28 @@ Partial Class frmMDI
         Me.itmAbrir.Size = New System.Drawing.Size(165, 22)
         Me.itmAbrir.Text = "Abrir"
         '
+        'itmSeparador1
+        '
+        Me.itmSeparador1.Name = "itmSeparador1"
+        Me.itmSeparador1.Size = New System.Drawing.Size(162, 6)
+        '
         'itmGuardar
         '
         Me.itmGuardar.Image = Global.FinanzApp.My.Resources.Resources._1439925644_1391
         Me.itmGuardar.Name = "itmGuardar"
         Me.itmGuardar.Size = New System.Drawing.Size(165, 22)
         Me.itmGuardar.Text = "Guardar"
+        '
+        'itmGuardarComo
+        '
+        Me.itmGuardarComo.Name = "itmGuardarComo"
+        Me.itmGuardarComo.Size = New System.Drawing.Size(165, 22)
+        Me.itmGuardarComo.Text = "Guardar como..."
+        '
+        'itmSeparador2
+        '
+        Me.itmSeparador2.Name = "itmSeparador2"
+        Me.itmSeparador2.Size = New System.Drawing.Size(162, 6)
         '
         'itmSalir
         '
@@ -159,9 +130,8 @@ Partial Class frmMDI
         '
         Me.itmMantenimiento.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.itmCuentas, Me.itmTransacciones, Me.itmSeparador3, Me.itmConfiguracion})
         Me.itmMantenimiento.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.0!)
-        Me.itmMantenimiento.Image = Global.FinanzApp.My.Resources.Resources._1439925619_120
         Me.itmMantenimiento.Name = "itmMantenimiento"
-        Me.itmMantenimiento.Size = New System.Drawing.Size(121, 21)
+        Me.itmMantenimiento.Size = New System.Drawing.Size(105, 21)
         Me.itmMantenimiento.Text = "Mantenimiento"
         '
         'itmCuentas
@@ -185,6 +155,7 @@ Partial Class frmMDI
         '
         'itmConfiguracion
         '
+        Me.itmConfiguracion.Image = Global.FinanzApp.My.Resources.Resources._1439925619_120
         Me.itmConfiguracion.Name = "itmConfiguracion"
         Me.itmConfiguracion.Size = New System.Drawing.Size(154, 22)
         Me.itmConfiguracion.Text = "Configuración"
@@ -193,17 +164,47 @@ Partial Class frmMDI
         '
         Me.itmVer.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.itmReportes})
         Me.itmVer.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.0!)
-        Me.itmVer.Image = Global.FinanzApp.My.Resources.Resources.up
         Me.itmVer.Name = "itmVer"
-        Me.itmVer.Size = New System.Drawing.Size(55, 21)
+        Me.itmVer.Size = New System.Drawing.Size(39, 21)
         Me.itmVer.Text = "Ver"
         '
         'itmReportes
         '
         Me.itmReportes.Image = Global.FinanzApp.My.Resources.Resources.report
         Me.itmReportes.Name = "itmReportes"
-        Me.itmReportes.Size = New System.Drawing.Size(152, 22)
+        Me.itmReportes.Size = New System.Drawing.Size(125, 22)
         Me.itmReportes.Text = "Reportes"
+        '
+        'itmAyuda
+        '
+        Me.itmAyuda.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.itmDocumentacion, Me.itmAcercaDe})
+        Me.itmAyuda.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.0!)
+        Me.itmAyuda.Name = "itmAyuda"
+        Me.itmAyuda.Size = New System.Drawing.Size(54, 21)
+        Me.itmAyuda.Text = "Ayuda"
+        '
+        'itmDocumentacion
+        '
+        Me.itmDocumentacion.Image = Global.FinanzApp.My.Resources.Resources.address_book
+        Me.itmDocumentacion.Name = "itmDocumentacion"
+        Me.itmDocumentacion.Size = New System.Drawing.Size(165, 22)
+        Me.itmDocumentacion.Text = "Documentación"
+        '
+        'itmAcercaDe
+        '
+        Me.itmAcercaDe.Image = Global.FinanzApp.My.Resources.Resources._1439927066_question_blue
+        Me.itmAcercaDe.Name = "itmAcercaDe"
+        Me.itmAcercaDe.Size = New System.Drawing.Size(165, 22)
+        Me.itmAcercaDe.Text = "Acerca de"
+        '
+        'sfdArchivo
+        '
+        Me.sfdArchivo.Filter = "Archivos FinanzApp|*.fnz"
+        Me.sfdArchivo.Title = "Guardar"
+        '
+        'ofdArchivo
+        '
+        Me.ofdArchivo.Filter = "Archivos FinanzApp|*.fnz"
         '
         'frmMDI
         '

@@ -23,17 +23,18 @@ Partial Class frmTransaccion
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTransaccion))
         Me.lblAño = New System.Windows.Forms.Label()
         Me.cmbAño = New System.Windows.Forms.ComboBox()
         Me.grvTransacciones = New System.Windows.Forms.DataGridView()
-        Me.btnSeleccionar = New System.Windows.Forms.Button()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.txtCodigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtCuenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnAgregarCuenta = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.txtValor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnSeleccionar = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         CType(Me.grvTransacciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -75,6 +76,41 @@ Partial Class frmTransaccion
         Me.grvTransacciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.grvTransacciones.Size = New System.Drawing.Size(458, 240)
         Me.grvTransacciones.TabIndex = 3
+        '
+        'txtCodigo
+        '
+        Me.txtCodigo.HeaderText = "CÓDIGO"
+        Me.txtCodigo.Name = "txtCodigo"
+        Me.txtCodigo.ReadOnly = True
+        Me.txtCodigo.Visible = False
+        '
+        'txtCuenta
+        '
+        Me.txtCuenta.HeaderText = "CUENTA"
+        Me.txtCuenta.MaxInputLength = 50
+        Me.txtCuenta.Name = "txtCuenta"
+        Me.txtCuenta.ReadOnly = True
+        Me.txtCuenta.ToolTipText = "Nombre de cuenta"
+        Me.txtCuenta.Width = 285
+        '
+        'btnAgregarCuenta
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.NullValue = "..."
+        Me.btnAgregarCuenta.DefaultCellStyle = DataGridViewCellStyle1
+        Me.btnAgregarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAgregarCuenta.HeaderText = ""
+        Me.btnAgregarCuenta.Name = "btnAgregarCuenta"
+        Me.btnAgregarCuenta.Text = ""
+        Me.btnAgregarCuenta.ToolTipText = "Buscar cuenta"
+        Me.btnAgregarCuenta.Width = 25
+        '
+        'txtValor
+        '
+        Me.txtValor.HeaderText = "VALOR"
+        Me.txtValor.MaxInputLength = 18
+        Me.txtValor.Name = "txtValor"
+        Me.txtValor.ToolTipText = "Valor de la cuenta"
         '
         'btnSeleccionar
         '
@@ -128,41 +164,6 @@ Partial Class frmTransaccion
         Me.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
-        'txtCodigo
-        '
-        Me.txtCodigo.HeaderText = "CÓDIGO"
-        Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.ReadOnly = True
-        Me.txtCodigo.Visible = False
-        '
-        'txtCuenta
-        '
-        Me.txtCuenta.HeaderText = "CUENTA"
-        Me.txtCuenta.MaxInputLength = 50
-        Me.txtCuenta.Name = "txtCuenta"
-        Me.txtCuenta.ReadOnly = True
-        Me.txtCuenta.ToolTipText = "Nombre de cuenta"
-        Me.txtCuenta.Width = 285
-        '
-        'btnAgregarCuenta
-        '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.NullValue = "..."
-        Me.btnAgregarCuenta.DefaultCellStyle = DataGridViewCellStyle1
-        Me.btnAgregarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAgregarCuenta.HeaderText = ""
-        Me.btnAgregarCuenta.Name = "btnAgregarCuenta"
-        Me.btnAgregarCuenta.Text = ""
-        Me.btnAgregarCuenta.ToolTipText = "Buscar cuenta"
-        Me.btnAgregarCuenta.Width = 25
-        '
-        'txtValor
-        '
-        Me.txtValor.HeaderText = "VALOR"
-        Me.txtValor.MaxInputLength = 18
-        Me.txtValor.Name = "txtValor"
-        Me.txtValor.ToolTipText = "Valor de la cuenta"
-        '
         'frmTransaccion
         '
         Me.AcceptButton = Me.btnGuardar
@@ -180,6 +181,7 @@ Partial Class frmTransaccion
         Me.Controls.Add(Me.lblAño)
         Me.Font = New System.Drawing.Font("Microsoft JhengHei UI Light", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmTransaccion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

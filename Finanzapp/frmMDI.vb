@@ -8,6 +8,8 @@
     End Sub
 
     Private Sub itmAcercaDe_Click(sender As Object, e As EventArgs) Handles itmAcercaDe.Click
+        frmAcercaDe.MdiParent = Me
+        frmAcercaDe.Show()
     End Sub
 
     Private Sub itmReportes_Click(sender As Object, e As EventArgs) Handles itmReportes.Click
@@ -39,6 +41,9 @@
         itmConfiguracion.Enabled = False
         ArchivoUsuarioPath = Nothing
         ArchivoPrincipal = Nothing
+        For Each VentanaHija In MdiChildren
+            VentanaHija.Close()
+        Next
     End Sub
     Private Sub EstadoConArchivo()
         itmTransacciones.Enabled = True
@@ -50,7 +55,6 @@
     Private Sub Nuevo()
         If ArchivoUsuarioPath Is Nothing Then
             CrearNuevoArchivo()
-            MostrarVentana(frmTransaccion)
         Else
             Dim Respuesta = MsgBox("Esta acción cerrará el archivo actual, ¿Deseas guardar los cambios realizados?",
                                    MsgBoxStyle.YesNoCancel, "Mensaje del Sistema")
@@ -58,16 +62,18 @@
                 If Respuesta = MsgBoxResult.Yes Then Guardar()
                 EstadoInicial()
                 CrearNuevoArchivo()
-                MostrarVentana(frmTransaccion)
             End If
         End If
     End Sub
     Private Sub CrearNuevoArchivo()
         If sfdArchivo.ShowDialog() = DialogResult.OK Then
             ArchivoUsuarioPath = sfdArchivo.FileName
-            If ArchivoPrincipal Is Nothing Then ArchivoPrincipal = New List(Of EstadoFinanciero)
+            If ArchivoPrincipal Is Nothing Then ArchivoPrincipal = New Proyecto
             GuardarArchivo(ArchivoUsuarioPath, ArchivoPrincipal)
             EstadoConArchivo()
+            MostrarVentana(frmTransaccion)
+        Else
+            EstadoInicial()
         End If
     End Sub
     Private Sub Guardar()
@@ -94,6 +100,8 @@
             ArchivoPrincipal = CargarArchivo(ArchivoUsuarioPath)
             MostrarVentana(frmTransaccion)
             EstadoConArchivo()
+        Else
+            EstadoInicial()
         End If
     End Sub
     Private Sub GuardarComo()
@@ -113,5 +121,12 @@
 
     Private Sub itmGuardarComo_Click(sender As Object, e As EventArgs) Handles itmGuardarComo.Click
         GuardarComo()
+    End Sub
+
+    Private Sub frmMDI_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If ArchivoUsuarioPath IsNot Nothing Then
+            Dim Resultado = MsgBox("¿Deseas guardar los cambios realizados antes de cerrar la aplicación?", MsgBoxStyle.YesNoCancel, "Mensaje del Sistema")
+            If Resultado = MsgBoxResult.Yes Then GuardarArchivo(ArchivoUsuarioPath, ArchivoPrincipal) Else If Resultado = MsgBoxResult.Cancel Then e.Cancel = True
+        End If
     End Sub
 End Class
