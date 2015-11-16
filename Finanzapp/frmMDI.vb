@@ -31,12 +31,14 @@
         InicializarDirectorioCuentas()
         InicializarClasificacionCuentas()
         InicializarCuentas()
+        InicializarIndicadoresEVA()
         EstadoInicial()
     End Sub
     Private Sub EstadoInicial()
         itmTransacciones.Enabled = False
         itmReportes.Enabled = False
         itmGuardar.Enabled = False
+        itmAnalisisFinanciero.Enabled = False
         itmGuardarComo.Enabled = False
         itmConfiguracion.Enabled = False
         ArchivoUsuarioPath = Nothing
@@ -51,6 +53,7 @@
         itmGuardar.Enabled = True
         itmGuardarComo.Enabled = True
         itmConfiguracion.Enabled = True
+        itmAnalisisFinanciero.Enabled = True
     End Sub
     Private Sub Nuevo()
         If ArchivoUsuarioPath Is Nothing Then
@@ -128,5 +131,10 @@
             Dim Resultado = MsgBox("¿Deseas guardar los cambios realizados antes de cerrar la aplicación?", MsgBoxStyle.YesNoCancel, "Mensaje del Sistema")
             If Resultado = MsgBoxResult.Yes Then GuardarArchivo(ArchivoUsuarioPath, ArchivoPrincipal) Else If Resultado = MsgBoxResult.Cancel Then e.Cancel = True
         End If
+    End Sub
+
+    Private Sub itmEVA_Click(sender As Object, e As EventArgs) Handles itmEVA.Click
+        frmEVA.MdiParent = Me
+        frmEVA.Show()
     End Sub
 End Class

@@ -80,6 +80,8 @@
     <Compile Include="Clases\EstadoFinanciero.vb" />
     <Compile Include="Clases\ClasificacionCuenta.vb" />
     <Compile Include="Clases\Cuenta.vb" />
+    <Compile Include="Clases\IndicadorEVA.vb" />
+    <Compile Include="Clases\IndicadorEVATransaccion.vb" />
     <Compile Include="Clases\Proyecto.vb" />
     <Compile Include="Clases\Transaccion.vb" />
     <Compile Include="Formularios\Ayuda\frmAcercaDe.Designer.vb">
@@ -124,6 +126,12 @@
     <Compile Include="Formularios\Mantenimiento\frmTransaccion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\Ver\frmEVA.Designer.vb">
+      <DependentUpon>frmEVA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ver\frmEVA.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMDI.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +154,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Módulos\AnalisisEVA.vb" />
     <Compile Include="Módulos\Archivo.vb" />
     <Compile Include="Módulos\Configuracion.vb" />
     <Compile Include="Módulos\General.vb" />
@@ -178,6 +187,9 @@
     <EmbeddedResource Include="Formularios\Mantenimiento\frmTransaccion.resx">
       <DependentUpon>frmTransaccion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ver\frmEVA.resx">
+      <DependentUpon>frmEVA.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMDI.es.resx">
       <DependentUpon>frmMDI.vb</DependentUpon>
     </EmbeddedResource>
@@ -205,9 +217,7 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formularios\Ver\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Orígenes de datos\dstEstadoFinanciero.xsc">
       <DependentUpon>dstEstadoFinanciero.xsd</DependentUpon>

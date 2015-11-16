@@ -4,4 +4,8 @@
             ComboBoxAños.Items.Add(Año)
         Next
     End Sub
+    Public Function ObtenerIngresosBrutos() As Decimal
+        Dim IngresosBrutos As Decimal = 0
+        Return IngresosBrutos
+    End Function
 End Module

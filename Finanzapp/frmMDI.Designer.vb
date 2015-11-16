@@ -40,6 +40,9 @@ Partial Class frmMDI
         Me.itmConfiguracion = New System.Windows.Forms.ToolStripMenuItem()
         Me.itmVer = New System.Windows.Forms.ToolStripMenuItem()
         Me.itmReportes = New System.Windows.Forms.ToolStripMenuItem()
+        Me.itmAnalisisFinanciero = New System.Windows.Forms.ToolStripMenuItem()
+        Me.itmEVA = New System.Windows.Forms.ToolStripMenuItem()
+        Me.itmDescuentoFlujoFondos = New System.Windows.Forms.ToolStripMenuItem()
         Me.itmAyuda = New System.Windows.Forms.ToolStripMenuItem()
         Me.itmDocumentacion = New System.Windows.Forms.ToolStripMenuItem()
         Me.itmAcercaDe = New System.Windows.Forms.ToolStripMenuItem()
@@ -162,7 +165,7 @@ Partial Class frmMDI
         '
         'itmVer
         '
-        Me.itmVer.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.itmReportes})
+        Me.itmVer.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.itmReportes, Me.itmAnalisisFinanciero})
         Me.itmVer.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.0!)
         Me.itmVer.Name = "itmVer"
         Me.itmVer.Size = New System.Drawing.Size(39, 21)
@@ -172,8 +175,27 @@ Partial Class frmMDI
         '
         Me.itmReportes.Image = Global.FinanzApp.My.Resources.Resources.report
         Me.itmReportes.Name = "itmReportes"
-        Me.itmReportes.Size = New System.Drawing.Size(125, 22)
+        Me.itmReportes.Size = New System.Drawing.Size(177, 22)
         Me.itmReportes.Text = "Reportes"
+        '
+        'itmAnalisisFinanciero
+        '
+        Me.itmAnalisisFinanciero.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.itmEVA, Me.itmDescuentoFlujoFondos})
+        Me.itmAnalisisFinanciero.Name = "itmAnalisisFinanciero"
+        Me.itmAnalisisFinanciero.Size = New System.Drawing.Size(177, 22)
+        Me.itmAnalisisFinanciero.Text = "Análisis Financiero"
+        '
+        'itmEVA
+        '
+        Me.itmEVA.Name = "itmEVA"
+        Me.itmEVA.Size = New System.Drawing.Size(264, 22)
+        Me.itmEVA.Text = "Valor Económico Agregado (EVA)"
+        '
+        'itmDescuentoFlujoFondos
+        '
+        Me.itmDescuentoFlujoFondos.Name = "itmDescuentoFlujoFondos"
+        Me.itmDescuentoFlujoFondos.Size = New System.Drawing.Size(264, 22)
+        Me.itmDescuentoFlujoFondos.Text = "Descuento de Flujos de Fondos"
         '
         'itmAyuda
         '
@@ -253,4 +275,7 @@ Partial Class frmMDI
     Friend WithEvents itmGuardarComo As ToolStripMenuItem
     Friend WithEvents sfdArchivo As SaveFileDialog
     Friend WithEvents ofdArchivo As OpenFileDialog
+    Friend WithEvents itmAnalisisFinanciero As ToolStripMenuItem
+    Friend WithEvents itmEVA As ToolStripMenuItem
+    Friend WithEvents itmDescuentoFlujoFondos As ToolStripMenuItem
 End Class
