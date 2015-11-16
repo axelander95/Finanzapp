@@ -154,7 +154,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Módulos\AnalisisEVA.vb" />
     <Compile Include="Módulos\Archivo.vb" />
     <Compile Include="Módulos\Configuracion.vb" />
     <Compile Include="Módulos\General.vb" />
@@ -217,7 +216,9 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\logo500x500.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Orígenes de datos\dstEstadoFinanciero.xsc">
       <DependentUpon>dstEstadoFinanciero.xsd</DependentUpon>
@@ -279,6 +280,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1439927066_question_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NamSolutions500x500.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -46,6 +46,7 @@ Module Configuracion
             ObjetoArchivo.Add(New Cuenta("ACR", "PC", "ACREEDORES", False))
             ObjetoArchivo.Add(New Cuenta("IXP", "PC", "IMPUESTOS POR PAGAR", False))
             ObjetoArchivo.Add(New Cuenta("CXP", "PC", "CUENTAS POR PAGAR", False))
+            ObjetoArchivo.Add(New Cuenta("VTS", "INB", "VENTAS", False))
             GuardarArchivo(ArchivoCuentasPath, ObjetoArchivo)
         End If
     End Sub
@@ -65,9 +66,6 @@ Module Configuracion
             ObjetoArchivo.Add(New IndicadorEVA("A", "GRADO DE ENDEUDAMIENTO"))
             ObjetoArchivo.Add(New IndicadorEVA("ROE", "RETORNO DEL PATRIMONIO"))
             ObjetoArchivo.Add(New IndicadorEVA("D", "ENDEUDAMIENTO"))
-            ObjetoArchivo.Add(New IndicadorEVA("M", "MARGEN DE UTILIDAD"))
-            ObjetoArchivo.Add(New IndicadorEVA("M", "MARGEN DE UTILIDAD"))
-            ObjetoArchivo.Add(New IndicadorEVA("M", "MARGEN DE UTILIDAD"))
             ObjetoArchivo.Add(New IndicadorEVA("I**", "TASA MÁXIMA DE INTERÉS PARA PAGAR"))
             ObjetoArchivo.Add(New IndicadorEVA("IE", "COSTO PROMEDIO DE LAS DEUDAS"))
             ObjetoArchivo.Add(New IndicadorEVA("TI", "TASA IMPOSITIVA"))

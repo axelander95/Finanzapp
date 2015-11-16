@@ -133,6 +133,9 @@
   <data name="1439925626_140" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1439925626_140.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1439927066_question_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1439927066_question_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1439925575_004" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1439925575_004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -141,6 +144,9 @@
   </data>
   <data name="1439926311_090" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1439926311_090.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo500x500" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo500x500.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1439927080_folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1439927080_folder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,7 +172,7 @@
   <data name="1439925608_006" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1439925608_006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1439927066_question_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1439927066_question_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NamSolutions500x500" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NamSolutions500x500.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

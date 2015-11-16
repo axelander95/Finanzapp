@@ -16,13 +16,13 @@
         "Entry"
         {
         "MsmKey" = "8:_5C2155D5E76A3C50B7442A5B4F41871B"
-        "OwnerKey" = "8:_B1AC76042E4945D6B4AE8FEBF1A03EB2"
+        "OwnerKey" = "8:_F19EF844FC81422FB5E75C1AF157B1A1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_7E8F2AD75E1073C657304B436271096C"
-        "OwnerKey" = "8:_B1AC76042E4945D6B4AE8FEBF1A03EB2"
+        "OwnerKey" = "8:_F19EF844FC81422FB5E75C1AF157B1A1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -34,7 +34,7 @@
         "Entry"
         {
         "MsmKey" = "8:_90FEA5DE44290F5C34F5E3B243145811"
-        "OwnerKey" = "8:_B1AC76042E4945D6B4AE8FEBF1A03EB2"
+        "OwnerKey" = "8:_F19EF844FC81422FB5E75C1AF157B1A1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -46,7 +46,7 @@
         "Entry"
         {
         "MsmKey" = "8:_AD20F9B3AA064084741BF428493FCB3A"
-        "OwnerKey" = "8:_B1AC76042E4945D6B4AE8FEBF1A03EB2"
+        "OwnerKey" = "8:_F19EF844FC81422FB5E75C1AF157B1A1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -64,12 +64,12 @@
         "Entry"
         {
         "MsmKey" = "8:_AD85047E934A2592628BFD6A394AF93A"
-        "OwnerKey" = "8:_B1AC76042E4945D6B4AE8FEBF1A03EB2"
+        "OwnerKey" = "8:_F19EF844FC81422FB5E75C1AF157B1A1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B1AC76042E4945D6B4AE8FEBF1A03EB2"
+        "MsmKey" = "8:_B2AD26294B0B4A6F94C320E0101A39F3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -82,7 +82,13 @@
         "Entry"
         {
         "MsmKey" = "8:_D501142B491AC422A17B467E546736A1"
-        "OwnerKey" = "8:_B1AC76042E4945D6B4AE8FEBF1A03EB2"
+        "OwnerKey" = "8:_F19EF844FC81422FB5E75C1AF157B1A1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F19EF844FC81422FB5E75C1AF157B1A1"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -94,7 +100,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B1AC76042E4945D6B4AE8FEBF1A03EB2"
+        "OwnerKey" = "8:_F19EF844FC81422FB5E75C1AF157B1A1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -377,6 +383,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B2AD26294B0B4A6F94C320E0101A39F3"
+            {
+            "SourcePath" = "8:C:\\Users\\Andrés\\Downloads\\logo64x64.ico"
+            "TargetName" = "8:logo64x64.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_466438A99FB14A18B2FD78556C1FDEEC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D501142B491AC422A17B467E546736A1"
             {
             "AssemblyRegister" = "3:1"
@@ -424,10 +450,21 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_466438A99FB14A18B2FD78556C1FDEEC"
+                    {
+                    "Name" = "8:res"
+                    "AlwaysCreate" = "11:TRUE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_6F7DDF05FB574BD5B950D06E3D0D2D8E"
+                        "Folders"
+                        {
+                        }
+                    }
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_945A0F47F8E94858B87D5D90A0417C1A"
                     {
                     "Name" = "8:bin"
-                    "AlwaysCreate" = "11:FALSE"
+                    "AlwaysCreate" = "11:TRUE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
                     "Property" = "8:_396BD61207AC4504BBE0587117B68C69"
@@ -493,7 +530,7 @@
         "Keywords" = "8:Finanzas, Análisis Financiero"
         "ARPCOMMENTS" = "8:Proyecto de Análisis Financiero"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_B2AD26294B0B4A6F94C320E0101A39F3"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -604,10 +641,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_B1AC76042E4945D6B4AE8FEBF1A03EB2"
+            "Target" = "8:_F19EF844FC81422FB5E75C1AF157B1A1"
             "Folder" = "8:_83B486959FA44E3AB32686AE8DD894E9"
             "WorkingFolder" = "8:_945A0F47F8E94858B87D5D90A0417C1A"
-            "Icon" = "8:"
+            "Icon" = "8:_B2AD26294B0B4A6F94C320E0101A39F3"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_FEA4BBE4234140099384BE31CAABA3AB"
@@ -618,10 +655,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_B1AC76042E4945D6B4AE8FEBF1A03EB2"
+            "Target" = "8:_F19EF844FC81422FB5E75C1AF157B1A1"
             "Folder" = "8:_ED17220D92284F3E915E7E4ED9635D73"
             "WorkingFolder" = "8:_945A0F47F8E94858B87D5D90A0417C1A"
-            "Icon" = "8:"
+            "Icon" = "8:_B2AD26294B0B4A6F94C320E0101A39F3"
             "Feature" = "8:"
             }
         }
@@ -1023,7 +1060,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B1AC76042E4945D6B4AE8FEBF1A03EB2"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_F19EF844FC81422FB5E75C1AF157B1A1"
             {
             "SourcePath" = "8:..\\Finanzapp\\obj\\Debug\\FinanzApp.exe"
             "TargetName" = "8:"

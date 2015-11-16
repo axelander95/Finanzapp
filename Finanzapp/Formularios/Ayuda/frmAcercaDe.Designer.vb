@@ -22,23 +22,15 @@ Partial Class frmAcercaDe
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ptbLogo = New System.Windows.Forms.PictureBox()
         Me.lblAplicacion = New System.Windows.Forms.Label()
         Me.lblVersion = New System.Windows.Forms.Label()
         Me.lblDesarrolladoPor = New System.Windows.Forms.Label()
-        Me.ptbNamSolutions = New System.Windows.Forms.PictureBox()
         Me.lblDescripcion = New System.Windows.Forms.Label()
-        CType(Me.ptbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ptbNamSolutions = New System.Windows.Forms.PictureBox()
+        Me.ptbLogo = New System.Windows.Forms.PictureBox()
         CType(Me.ptbNamSolutions, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ptbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ptbLogo
-        '
-        Me.ptbLogo.Location = New System.Drawing.Point(13, 13)
-        Me.ptbLogo.Name = "ptbLogo"
-        Me.ptbLogo.Size = New System.Drawing.Size(185, 173)
-        Me.ptbLogo.TabIndex = 0
-        Me.ptbLogo.TabStop = False
         '
         'lblAplicacion
         '
@@ -69,14 +61,6 @@ Partial Class frmAcercaDe
         Me.lblDesarrolladoPor.TabIndex = 3
         Me.lblDesarrolladoPor.Text = "Desarrollado por"
         '
-        'ptbNamSolutions
-        '
-        Me.ptbNamSolutions.Location = New System.Drawing.Point(204, 70)
-        Me.ptbNamSolutions.Name = "ptbNamSolutions"
-        Me.ptbNamSolutions.Size = New System.Drawing.Size(127, 72)
-        Me.ptbNamSolutions.TabIndex = 4
-        Me.ptbNamSolutions.TabStop = False
-        '
         'lblDescripcion
         '
         Me.lblDescripcion.AutoSize = True
@@ -85,6 +69,27 @@ Partial Class frmAcercaDe
         Me.lblDescripcion.Size = New System.Drawing.Size(137, 18)
         Me.lblDescripcion.TabIndex = 5
         Me.lblDescripcion.Text = "Aplicación financiera"
+        '
+        'ptbNamSolutions
+        '
+        Me.ptbNamSolutions.Image = Global.FinanzApp.My.Resources.Resources.NamSolutions500x500
+        Me.ptbNamSolutions.Location = New System.Drawing.Point(204, 70)
+        Me.ptbNamSolutions.Name = "ptbNamSolutions"
+        Me.ptbNamSolutions.Size = New System.Drawing.Size(149, 72)
+        Me.ptbNamSolutions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbNamSolutions.TabIndex = 4
+        Me.ptbNamSolutions.TabStop = False
+        '
+        'ptbLogo
+        '
+        Me.ptbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ptbLogo.Image = Global.FinanzApp.My.Resources.Resources.logo500x500
+        Me.ptbLogo.Location = New System.Drawing.Point(13, 13)
+        Me.ptbLogo.Name = "ptbLogo"
+        Me.ptbLogo.Size = New System.Drawing.Size(185, 173)
+        Me.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbLogo.TabIndex = 0
+        Me.ptbLogo.TabStop = False
         '
         'frmAcercaDe
         '
@@ -106,8 +111,8 @@ Partial Class frmAcercaDe
         Me.Name = "frmAcercaDe"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Acerca de FinanzApp"
-        CType(Me.ptbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ptbNamSolutions, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

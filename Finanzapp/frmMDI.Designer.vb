@@ -22,6 +22,7 @@ Partial Class frmMDI
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMDI))
         Me.sstBarraEstado = New System.Windows.Forms.StatusStrip()
         Me.pgbMDI = New System.Windows.Forms.ToolStripProgressBar()
         Me.mstMDI = New System.Windows.Forms.MenuStrip()
@@ -236,6 +237,7 @@ Partial Class frmMDI
         Me.Controls.Add(Me.sstBarraEstado)
         Me.Controls.Add(Me.mstMDI)
         Me.Font = New System.Drawing.Font("Microsoft YaHei Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.mstMDI
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)

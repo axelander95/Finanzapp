@@ -97,13 +97,18 @@ Partial Class frmEVA
         '
         'grvEVA
         '
+        Me.grvEVA.AllowUserToAddRows = False
+        Me.grvEVA.AllowUserToDeleteRows = False
+        Me.grvEVA.AllowUserToResizeRows = False
         Me.grvEVA.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grvEVA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grvEVA.Location = New System.Drawing.Point(13, 48)
         Me.grvEVA.Name = "grvEVA"
-        Me.grvEVA.Size = New System.Drawing.Size(603, 340)
+        Me.grvEVA.ReadOnly = True
+        Me.grvEVA.RowHeadersVisible = False
+        Me.grvEVA.Size = New System.Drawing.Size(775, 354)
         Me.grvEVA.TabIndex = 6
         '
         'frmEVA
@@ -113,7 +118,7 @@ Partial Class frmEVA
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.CancelButton = Me.btnCancelar
-        Me.ClientSize = New System.Drawing.Size(628, 400)
+        Me.ClientSize = New System.Drawing.Size(800, 414)
         Me.Controls.Add(Me.grvEVA)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnGenerar)
